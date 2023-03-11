@@ -6,13 +6,10 @@ docker run -t -i continuumio/miniconda3 /bin/bash
 
 conda info
 
-docker run -i -t -p 8888:8888 -v C:/Users/Adhitya/Downloads/2023-02-25/conda_env/notebooks:/opt/notebooks continuumio/miniconda3 bash \
+docker run -i -t -p 8888:8888 -v F:/<path>/conda_env/notebooks:/opt/notebooks continuumio/miniconda3 bash \
 -c "/opt/conda/bin/conda install jupyterlab -y --quiet && /opt/conda/bin/jupyter lab \
 --notebook-dir=/opt/notebooks --ip='*' --port=8888 \
 --no-browser --allow-root"
-
-C:/Users/Adhitya/Downloads/2023-02-25/conda_env/notebooks  - location of the notebooks directory.
-bash - mention the path location of the bash
 
 --------------------------below are test commands------------------------------------
 docker run -i -t -p 8888:8888 -v C:/Users/Adhitya/Downloads/2023-02-25/conda_env/Data:/opt/notebooks continuumio/miniconda3 bash \
